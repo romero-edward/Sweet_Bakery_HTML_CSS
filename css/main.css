@@ -1,0 +1,467 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* font-family: "Roboto", sans-serif; */
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: darling;
+    src: url(../fonts/Darling.otf);
+}
+
+
+
+a {
+    /* con esto quita estilos a las anclas <a> */
+    text-decoration: none;
+}
+
+.logo {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    padding: 45px, 0px, 45px, 0px;
+}
+
+.logo img {
+    width: 80px;
+    height: 120px;
+}
+
+
+.header {
+    display: flex;
+    background-color: rgb(178, 165, 155);
+
+}
+
+
+.menu-nav {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    /* alineado horizontal centrado */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.container-nav {
+    width: 80%;
+    display: flex;
+}
+
+.menu a {
+    padding: 0px 25px 0px 25px;
+    font-size: 18px;
+    font-weight: 900;
+    color: #3a2d2d;
+}
+
+.menu a:hover {
+    color: #607274;
+    background-color: #DED0B6;
+    border-radius: 5px;
+    transition: all .35s ease-in-out;
+}
+
+.menu-social ul {
+    list-style: none;
+    display: flex;
+}
+
+.social-media i {
+    padding: 25px;
+    font-size: 25px;
+    color: #fff;
+}
+
+.social-media i:hover {
+    color: rgba(0, 255, 242);
+}
+
+.social-media {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SECCION HERO */
+.hero {
+    background-image: url(../img/myhero.jpg);
+    width: 100%;
+    height: 490px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+
+
+
+
+.hero h1 {
+    color: #fff;
+    background-color: rgba(165, 143, 143, 0.26);
+    padding: 20px;
+}
+
+/* mi span de clase: pasteles lleva la palabra postres en index */
+.pasteles {
+    padding: 0px 10px 0px 10px;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: darling;
+
+}
+
+
+
+.title-secondary {
+    text-align: center;
+    font-size: 40px;
+}
+
+.background-section-1 {
+    /* es un fondo degradado */
+    /* estos valores son tomados rgb de la paleta de colores que seleccione en https://colorhunt.co/palette/607274faeed1ded0b6b2a59b */
+    background-image: linear-gradient(rgb(178, 165, 155), rgb(250, 238, 209));
+}
+
+
+.first-box {
+    /* contenedor padre */
+    display: flex;
+    padding: 5%;
+
+}
+
+.first-box img {
+    width: 50%;
+    padding: 2%;
+}
+
+.first-box p {
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-align: justify;
+    padding: 2%;
+}
+
+.first-box h4 {
+    padding: 2%;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+/* css de seccion 2 */
+.background-section-2 {
+    background-color: rgb(250, 238, 209);
+}
+
+footer {
+    display: flex;
+    background-color: #607274;
+    padding: 0px 25px 0px 25px;
+}
+
+.info {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* alineado vertical */
+    justify-content: center;
+    /* alineado horizontal */
+}
+
+.info h4 {
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+/* este codigo es para ocultar menu hamburguesa en pantallas grandes */
+.icono-menu {
+    display: none;
+}
+
+.affogato-mobile {
+    display: none;
+}
+
+.affogato-desktop {
+    display: block;
+}
+
+@media only screen and (max-width: 768px) {
+    .logo {
+        width: 100%;
+        position: relative;
+        z-index: 999;
+        /* background-color: rgb(96, 114, 116); */
+        background-color: rgb(116, 104, 96);
+    }
+
+    .menu-nav {
+        width: 100%;
+    }
+
+    .social-media {
+        width: 100%;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .menu li {
+        text-align: center;
+        margin: 10px 0px;
+    }
+
+    .hero {
+        height: 250px;
+        background-position: left center;
+    }
+
+    .icono-menu {
+        display: block;
+        color: #fff;
+        font-size: 20px;
+        padding: 8px 10px 8px 10px;
+    }
+
+    .container-nav {
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: -250px;
+        background-color: rgb(96, 114, 116);
+        transition: 1s ease top;
+    }
+
+    /* este cod es para JS */
+    .container-nav-2{
+        top: 117px;
+    }
+
+    footer {
+        flex-wrap: wrap;
+    }
+
+    .first-box {
+        display: block;
+    }
+
+    .first-box img {
+        width: 100%;
+        padding: 0px;
+    }
+
+    .affogato-mobile {
+        display: block;
+    }
+
+    .affogato-desktop {
+        display: none;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+}
+
+
+
+/* INICIO DE STYLE SOBRE NOSOTROS */
+/* INICIO DE STYLE SOBRE NOSOTROS */
+/* INICIO DE STYLE SOBRE NOSOTROS */
+/* INICIO DE STYLE SOBRE NOSOTROS */
+
+
+.about-us-hero {
+    background-image: url(../img/about-us-fondo.jpg);
+    width: 100%;
+    height: 490px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.about-us-hero h1 {
+    color: #fff;
+    background-color: rgba(165, 143, 143, 0.26);
+    padding: 20px;
+
+}
+
+.mision-vision-values {
+    padding-top: 3px;
+    padding-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%;
+
+}
+
+
+
+
+/* NUESTROS SERVICIOS */
+/* NUESTROS SERVICIOS */
+/* NUESTROS SERVICIOS */
+/* NUESTROS SERVICIOS */
+/* NUESTROS SERVICIOS */
+
+.our-services-hero {
+    background-image: url(../img/our-services-img.jpg);
+    width: 100%;
+    height: 520px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.our-services-hero h1 {
+    color: #0b0c0c;
+    background-color: rgb(178, 165, 155);
+    padding: 20px;
+
+}
+
+.services-title ul li {
+    padding-top: 15%;
+}
+
+
+/* CONTACTO */
+/* CONTACTO */
+/* CONTACTO */
+/* CONTACTO */
+/* CONTACTO */
+/* CONTACTO */
+/* CONTACTO */
+/* CONTACTO */
+
+.contact-us-hero {
+    background-image: url(../img/contact-us-img.jpg);
+    width: 100%;
+    height: 490px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.contact-us-hero h1 {
+    color: #0b0c0c;
+    background-color: rgb(178, 165, 155);
+    padding: 20px;
+
+}
+
+/* ajustar iframe */
+.first-box-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-maps {
+    margin-top: 5%;
+    padding-bottom: 3%;
+    text-align: center;
+}
+
+
+.contact-us-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5%;
+}
+
+.second-box h3 {
+    padding-top: 5%;
+    padding-bottom: 3%;
+    text-align: center;
+}
+
+/* codigo formulario */
+form {
+    padding: 50px 55px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    text-align: center;
+    width: 340px;
+    background-color: rgb(136, 130, 125);
+    /* background-color: rgba(119, 110, 110, 0.966); */
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+h2 {
+    color: #283629;
+    font-size: 35px;
+}
+
+label {
+    color: #283629;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+input,
+textarea {
+    padding: 17px 25px;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    background-color: #EDFFF0;
+    border: 2px solid #f0faf1;
+    color: #283629;
+    outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #b5bab6;
+}
+
+.btn {
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #283629;
+}
+
+.btn:hover {
+    color: aqua;
+}
